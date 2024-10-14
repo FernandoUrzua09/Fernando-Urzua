@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class AreaRectangulo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingresa la base del rectángulo: ");
+        double base = scanner.nextDouble();
+        System.out.print("Ingresa la altura del rectángulo: ");
+        double altura = scanner.nextDouble();
+        double area = base * altura;
+        System.out.println("El área del rectángulo es: " + area);
+    }
+}
+
+import java.util.Scanner;
+
+public class CalcularPromedio {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double suma = 0;
+        for (int i = 1; i <= 3; i++) {
+            System.out.print("Ingresa el número " + i + ": ");
+            double numero = scanner.nextDouble();
+            suma += numero;
+        }
+        double promedio = suma / 3;
+        System.out.println("El promedio es: " + promedio);
+    }
+}
+
+import java.util.Scanner;
+
+public class CalcularIMC {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingresa tu peso en kilogramos: ");
+        double peso = scanner.nextDouble();
+        System.out.print("Ingresa tu altura en metros: ");
+        double altura = scanner.nextDouble();
+        double imc = peso / (altura * altura);
+        System.out.println("Tu Índice de Masa Corporal es: " + imc);
+    }
+}
+
+import java.util.Scanner;
+
+public class CalcularSalarioNeto {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingresa el salario bruto: ");
+        double salarioBruto = scanner.nextDouble();
+        System.out.print("Ingresa el porcentaje de impuestos: ");
+        double porcentajeImpuestos = scanner.nextDouble();
+        System.out.print("Ingresa las deducciones adicionales: ");
+        double deducciones = scanner.nextDouble();
+        
+        double impuesto = salarioBruto * (porcentajeImpuestos / 100);
+        double salarioNeto = salarioBruto - impuesto - deducciones;
+        
+        System.out.println("El salario neto es: " + salarioNeto);
+    }
+}
