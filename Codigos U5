@@ -1,0 +1,84 @@
+1:
+public class ContarParesImpares {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] numeros = new int[10];
+        int pares = 0, impares = 0;
+
+        System.out.println("Ingresa 10 números enteros:");
+        for (int i = 0; i < 10; i++) {
+            numeros[i] = scanner.nextInt();
+            if (numeros[i] % 2 == 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+        }
+
+        System.out.println("Números pares: " + pares);
+        System.out.println("Números impares: " + impares);
+    }
+}
+
+2:
+public class SumaElementos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] numeros = new int[5];
+        int suma = 0;
+
+        System.out.println("Ingresa 5 números enteros:");
+        for (int i = 0; i < 5; i++) {
+            numeros[i] = scanner.nextInt();
+            suma += numeros[i];
+        }
+
+        System.out.println("Suma de los elementos: " + suma);
+    }
+}
+
+3:
+public class MayorMenor {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] numeros = new int[8];
+        int mayor, menor;
+
+        System.out.println("Ingresa 8 números enteros:");
+        for (int i = 0; i < 8; i++) {
+            numeros[i] = scanner.nextInt();
+        }
+
+        mayor = menor = numeros[0];
+        for (int i = 1; i < 8; i++) {
+            if (numeros[i] > mayor) {
+                mayor = numeros[i];
+            }
+            if (numeros[i] < menor) {
+                menor = numeros[i];
+            }
+        }
+
+        System.out.println("Número mayor: " + mayor);
+        System.out.println("Número menor: " + menor);
+    }
+}
+
+4:
+public class InvertirElementos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] numeros = new int[6];
+
+        System.out.println("Ingresa 6 números enteros:");
+        for (int i = 0; i < 6; i++) {
+            numeros[i] = scanner.nextInt();
+        }
+
+        System.out.println("Array invertido:");
+        for (int i = 5; i >= 0; i--) {
+            System.out.print(numeros[i] + " ");
+        }
+    }
+}
+
