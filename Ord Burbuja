@@ -1,0 +1,36 @@
+
+public class OrdenamientoBurbuja {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Paso 1
+        System.out.print("Ingrese la cantidad de elementos para el arreglo: ");
+        int n = scanner.nextInt();
+
+        // Paso 2
+        int[] numeros = new int[n];
+        System.out.println("Ingrese los números:");
+        for (int i = 0; i < n; i++) {
+            System.out.print("Número " + (i + 1) + ": ");
+            numeros[i] = scanner.nextInt();
+        }
+
+        // Paso 3
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (numeros[j] > numeros[j + 1]) {
+                    // Intercambiar elementos
+                    int temp = numeros[j];
+                    numeros[j] = numeros[j + 1];
+                    numeros[j + 1] = temp;
+                }
+            }
+        }
+
+        // Paso 4
+        System.out.println("Arreglo ordenado en orden ascendente:");
+        for (int num : numeros) {
+            System.out.print(num + " ");
+        }
+    }
+}
