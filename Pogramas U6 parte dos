@@ -1,0 +1,72 @@
+// Programa 1: Área y Perímetro de un Círculo
+import java.util.Scanner;
+
+public class Circulo {
+    // Para calcular el área
+    public static double calcularArea(double radio) {
+        return Math.PI * Math.pow(radio, 2);
+    }
+
+    // Para calcular el perímetro
+    public static double calcularPerimetro(double radio) {
+        return 2 * Math.PI * radio;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingresa el radio del círculo: ");
+        double radio = scanner.nextDouble();
+
+        double area = calcularArea(radio);
+        double perimetro = calcularPerimetro(radio);
+
+        System.out.println("El área del círculo es: " + area);
+        System.out.println("El perímetro del círculo es: " + perimetro);
+    }
+}
+
+// Programa 2: Verificar Edad
+import java.util.Scanner;
+
+public class VerificarEdad {
+    // Para verificar si puede votar
+    public static boolean puedeVotar(int edad) {
+        return edad >= 18;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingresa tu edad: ");
+        int edad = scanner.nextInt();
+
+        if (puedeVotar(edad)) {
+            System.out.println("Puedes votar.");
+        } else {
+            System.out.println("No puedes votar.");
+        }
+    }
+}
+
+// Programa 3: Verificar Palíndromo
+import java.util.Scanner;
+
+public class Palindromo {
+    // Para verificar si una cadena es palíndromo
+    public static boolean esPalindromo(String texto) {
+        String textoLimpio = texto.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        String textoInvertido = new StringBuilder(textoLimpio).reverse().toString();
+        return textoLimpio.equals(textoInvertido);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingresa una cadena de texto: ");
+        String texto = scanner.nextLine();
+
+        if (esPalindromo(texto)) {
+            System.out.println("Es un palíndromo.");
+        } else {
+            System.out.println("No es un palíndromo.");
+        }
+    }
+}
